@@ -233,8 +233,8 @@ def play_game(li, game_id, control_queue, engine_factory, user_profile, config, 
         def __init__(self, room):
             self.room = room
     opponent = game.black.name if game.white.name == user_profile["username"] else game.white.name
-    conversation.send_reply(SendLine('player'), f'Good Luck @{opponent}')
-    conversation.send_reply(SendLine('spectator'), f'Good Luck @{opponent}')
+    conversation.send_reply(SendLine('player'), f'Hi, Good Luck Please join my team lichess.org/team/death_squad @{opponent}')
+    conversation.send_reply(SendLine('spectator'), f'Welocome @{opponent}')
     
     variant=game.perf_name
 
@@ -313,8 +313,8 @@ def play_game(li, game_id, control_queue, engine_factory, user_profile, config, 
         except StopIteration:
             break
     
-    conversation.send_reply(SendLine('player'), f'Good Game')
-    conversation.send_reply(SendLine('spectator'), f'Good Game')
+    conversation.send_reply(SendLine('player'), f'Good Game! I think You have join my team Thanks for Playing')
+    conversation.send_reply(SendLine('spectator'), f'Thank you!')
 
     engine.stop()
     engine.quit()
